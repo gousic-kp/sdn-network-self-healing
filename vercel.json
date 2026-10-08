@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "sdn-network-self-healing",
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "framework": "vite",
