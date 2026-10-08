@@ -1,0 +1,4 @@
+ryu>=4.34
+networkx>=3.0
+eventlet>=0.33.0
+requests>=2.31.0
