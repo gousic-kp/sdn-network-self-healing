@@ -24,6 +24,14 @@ export const api = {
     return res.json();
   },
 
+  async getSwitches(): Promise<{ count: number; switches: any[] }> {
+    const res = await fetch(`${API_BASE_URL}/topology`);
+    if (!res.ok) throw new Error('Failed to fetch switches');
+    const data = await res.json();
+    const switches = (data.nodes || []).filter((n: any) => n.type === 'switch');
+    return { count: switches.length, switches };
+  },
+
   async getFlows(): Promise<{ count: number; flows: FlowRule[] }> {
     const res = await fetch(`${API_BASE_URL}/flows`);
     if (!res.ok) throw new Error('Failed to fetch flows');

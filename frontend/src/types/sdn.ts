@@ -1,5 +1,5 @@
 export interface SDNNode {
-  id: str;
+  id: string;
   label: string;
   type: 'host' | 'switch';
   ip?: string;

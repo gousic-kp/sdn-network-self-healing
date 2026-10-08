@@ -25,3 +25,4 @@ sdn_platform.db
 Thumbs.db
 .vscode/
 .idea/
+.vercel
